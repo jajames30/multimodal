@@ -5,21 +5,68 @@
 		<title>Multi Modal Project by Jennifer James</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--<link rel="stylesheet" href="assets/css/main.css" />-->
+		<link rel="stylesheet" href="stylesheet.css">
+		<!--<script  src="myscript.js"></script>-->
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header">
 				<h1>Multi Modal Project by Jennifer James</h1>
+				<h2>ENG W315 Fall 2021</h2>
 			</header>
 
+
+		<!-- to do -->
+			<section id="todo">
+				<h3>To do:</h3>
+				<ul>
+					<li>Move javascript to its own file</li>
+					<li>Add CSS for layout especially make the accordian stand out more</li>
+					<li>Make accordian default collapsed</li>
+					<li>Add info from table</li>
+					<li>Add the rest of the text</li>
+				</ul>
+			<section>
 		<!-- Main -->
 			<section id="main">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat eu odio ac tristique. Mauris sollicitudin sem et leo porttitor viverra. Nulla sed condimentum odio, quis fermentum urna. Ut vehicula pharetra velit a euismod. Fusce id lacus et velit posuere tincidunt. Morbi non tellus non odio laoreet porttitor quis malesuada velit. Vestibulum lacinia velit at elementum aliquam. Ut blandit faucibus odio.</p>
-				<p>Fusce sit amet venenatis augue, volutpat ultrices metus. Vestibulum et pharetra elit. Duis aliquet ultrices finibus. Nulla quis dignissim odio. Vestibulum et turpis quis risus efficitur mattis. Fusce fringilla ac arcu ut vestibulum. Integer varius molestie erat, in molestie leo. Donec in blandit sapien.</p>
+				<h3>Content</h3>
+				<ul>
+					<li class="outer"><span>text outer</span>
+					<ul>
+						<li class="inner">text inner 1</li>
+						<li class="inner">text inner 2</li>
+						<li class="inner">text inner 3</li>
+					</ul>
+					</li>
+				</ul>
 			</section>
 
+<script type="text/javascript">
+var allSpan = document.getElementsByTagName('span');
+
+for(var x = 0; x < allSpan.length; x++)
+{
+    allSpan[x].onclick=function()
+    {
+        if(this.parentNode)
+        {
+            var childList = this.parentNode.getElementsByTagName('LI');
+            for(var y = 0; y< childList.length;y++)
+            {
+                var currentState = childList[y].style.display;
+                if(currentState=="none")
+                {
+                    childList[y].style.display="block";
+                }
+                else
+                {
+                    childList[y].style.display="none";
+                }
+            }
+        }
+    }
+}
+</script>
 	</body>
 </html>
-© 2021 GitHub, Inc.
