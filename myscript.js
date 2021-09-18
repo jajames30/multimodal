@@ -1,3 +1,6 @@
+/*source: https://www.htmlgoodies.com/html5/creating-an-expandable-list-of-items-in-html-with-javascript/ -->*/
+
+
 var allSpan = document.getElementsByTagName('span');
 
 for(var x = 0; x < allSpan.length; x++)
