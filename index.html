@@ -70,6 +70,12 @@
 		<!-- Main -->
 			<section id="main">
 				<h3>Content -  click on outer list entries to collapse</h3>
+				<button type="button" class="collapsible">Open Collapsible</button>
+				<div class="content">
+				  <p>Lorem ipsum...</p>
+				</div>
+________________________________________
+
 				<ul>
 					<li class="outer"><span>Audience/purpose: Who is the intended audience? 
 					What is the intended purpose? How does the site make its intended audience and purpose clear? </span>
@@ -173,30 +179,21 @@
 			</section>
 
 <script type="text/javascript">
-var allSpan = document.getElementsByTagName('span');
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-for(var x = 0; x < allSpan.length; x++)
-{
-    allSpan[x].onclick=function()
-    {
-        if(this.parentNode)
-        {
-            var childList = this.parentNode.getElementsByTagName('LI');
-            for(var y = 0; y< childList.length;y++)
-            {
-                var currentState = childList[y].style.display;
-                if(currentState=="none")
-                {
-                    childList[y].style.display="block";
-                }
-                else
-                {
-                    childList[y].style.display="none";
-                }
-            }
-        }
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
     }
+  });
 }
+
 </script>
 	</body>
 </html>
