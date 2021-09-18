@@ -54,19 +54,6 @@
 			</p>
 
 
-		<!-- to do -->
-			<section id="todo">
-				<h3>To do:</h3>
-				<ul>
-					<li>Move javascript to its own file</li>
-					<li>Add CSS for layout especially make the accordian stand out more</li>
-					<li>Make accordian default collapsed</li>
-					<li>Add info from table - DONE</li>
-					<li>Add the rest of the text</li>
-					<li>Add site names and URLs to top of main - DONE</li>
-					<li>Make categories e.g. "Graphics" bold</li>
-				</ul>
-			<section>
 		<!-- Main -->
 			<section id="main">
 				<h3>Content -  click on outer list entries to collapse</h3>
@@ -171,9 +158,40 @@
 					
 				</ul>
 			</section>
+			
+		<!-- to do -->
+			<section id="todo">
+				<h3>To do:</h3>
+				<ul>
+					<li>Move javascript to its own file</li>
+					<li>Add CSS for layout especially make the accordian stand out more</li>
+					<li>Make accordian default collapsed</li>
+					<li>Add info from table - DONE</li>
+					<li>Add the rest of the text</li>
+					<li>Add site names and URLs to top of main - DONE</li>
+					<li>Make categories e.g. "Graphics" bold</li>
+					<li>Proof for grammar and punctuation</li>
+				</ul>
+			<section>
 
 <script type="text/javascript">
 var allSpan = document.getElementsByTagName('span');
+
+
+for(var x = 0; x < allSpan.length; x++)
+{
+	alert("got here")
+	alert(this.parentNode)
+	var childList = allSpan.getElementsByTagName('LI');
+	alert("define childList")
+	alert("childList.length", childList.length)
+	for(var y = 0; y< childList.length;y++)
+	{
+		alert("y=", y)
+		childList[y].style.display="none";
+	}
+}
+
 
 for(var x = 0; x < allSpan.length; x++)
 {

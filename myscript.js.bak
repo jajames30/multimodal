@@ -1,17 +1,7 @@
 /*source: https://www.htmlgoodies.com/html5/creating-an-expandable-list-of-items-in-html-with-javascript/ -->*/
-alert("Hello! I am an alert box!!");
+
 
 var allSpan = document.getElementsByTagName('span');
-
-
-for(var x = 0; x < allSpan.length; x++)
-{
-	var childList = this.parentNode.getElementsByTagName('LI');
-	for(var y = 0; y< childList.length;y++)
-    {
-        childList[y].style.display="none";
-	}
-}
 
 for(var x = 0; x < allSpan.length; x++)
 {
