@@ -42,3 +42,10 @@ h2 {
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
+/* put Disney image to right of text */
+img {
+	float: right;
+	width: 350px;
+	margin-left: 50px;
+}
